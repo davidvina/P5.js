@@ -1,2 +1,2 @@
 # P5.js
-P%.js practices
+P5.js practices

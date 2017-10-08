@@ -1,0 +1,25 @@
+{
+  "name": "p5js",
+  "version": "1.0.0",
+  "description": "P5.js practices",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidvina/P5.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidvina/P5.js/issues"
+  },
+  "homepage": "https://github.com/davidvina/P5.js#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-livereload": "^3.8.1"
+  }
+}

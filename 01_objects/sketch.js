@@ -1,17 +1,16 @@
-//global variables
+// global variables
 
-function setup() {
+function setup () {
 	// setup canvas
-	createCanvas(600, 400, P2D);
-
+	createCanvas(600, 400);
 }
 
-function draw() {
+function draw () {
 	// put drawing code here
-    background(255);
+	background(255);
 	stroke(0);
 	ellipse(200, 200, 20, 20);
-	fill(255,0,0);
-    ellipse(100,100,20,20);
-	rect(10,10,10,10);
+	fill(255, 0, 0);
+	ellipse(100, 100, 20, 20);
+	rect(10, 10, 10, 10);
 }

@@ -1,30 +1,40 @@
-var gulp		= require('gulp');
-var browserSync	= require('browser-sync').create();
+// https://www.browsersync.io/docs/gulp
 
-// Static server
-// gulp.task('browser-sync', function () {
-// 	browserSync.init({
-// 		server: {
-// 			baseDir: '01_objects/'
-// 		}
-// 	});
-// });
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
 
-gulp.task('watch', function() {
-	return gulp.src("01_objects/*.scss")
-		.pipe(browserSync.stream());
+var reload = browserSync.reload;
+
+
+// variables paths
+var path = {
+	src: 'SKETCHS/'
+};
+
+// function to init browser-sync server
+gulp.task('init-browser-sync', function () {
+	browserSync.init({
+		server: {
+			baseDir: path.src,
+			directory: true
+		},
+		port: 8080,
+		//reloadDelay: 200
+		//reloadOnRestart: false
+		//proxy: 'local.dev'
+	});
 });
-gulp.task('default', ['watch'], function () {
 
-    // Serve files from the root of this project
-    browserSync.init({
-        server: {
-            baseDir: "01_objects/index.html"
-        }
-    });
+// function to watch
 
-    // add browserSync.reload to the tasks array to make
-    // all browsers reload after tasks are complete.
-    gulp.watch("01_objects/*.*", ['watch']);
+
+gulp.task('default', ['init-browser-sync'], function () {
+
+	// watch function
+	// gulp.watch(path.src + '**/*.*').on('change', browserSync.reload);
+
+	// using manual reload
+	gulp.watch(path.src + '**/*.*').on('change', reload);
 });
- //
+
+//

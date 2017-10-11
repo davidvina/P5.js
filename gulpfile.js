@@ -5,7 +5,6 @@ var browserSync = require('browser-sync').create();
 
 var reload = browserSync.reload;
 
-
 // variables paths
 var path = {
 	src: 'SKETCHS/'
@@ -18,15 +17,14 @@ gulp.task('init-browser-sync', function () {
 			baseDir: path.src,
 			directory: true
 		},
-		port: 8080,
-		//reloadDelay: 200
-		//reloadOnRestart: false
-		//proxy: 'local.dev'
+		port: 8080
+	//	reloadDelay: 200
+	//	reloadOnRestart: false
+	//	proxy: 'local.dev'
 	});
 });
 
 // function to watch
-
 
 gulp.task('default', ['init-browser-sync'], function () {
 

@@ -6,8 +6,6 @@ function setup() {
 
   // setup canvas
   createCanvas(600, 400);
-
-  //
   frameRate(30);
 
   // for loop
@@ -16,8 +14,6 @@ function setup() {
     bubbles.push(new Bubble(random(0, width), random(0, height)));
   }
 
-  // show text on console
-  //console.log(random(0,width));
 }
 
 function draw() {
@@ -29,13 +25,7 @@ function draw() {
     bubbles[i].display();
     bubbles[i].move();
   }
-
-  // fill(255,0,0);
-  // textSize(32);
-  // text(frameRate(), 10, 30);
-
 }
-
 
 
 //

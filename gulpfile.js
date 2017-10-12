@@ -18,6 +18,7 @@ gulp.task('init-browser-sync', function () {
       directory: true,
     },
     port: 8080,
+
     //	reloadDelay: 200
     //	reloadOnRestart: false
     //	proxy: 'local.dev'

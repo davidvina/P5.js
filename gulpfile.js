@@ -1,18 +1,17 @@
 // https://www.browsersync.io/docs/gulp
-
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-
-var reload = browserSync.reload;
 
 // variables paths
 var path = {
   src: 'SKETCHS/',
 };
 
-// function to init browser-sync server
-gulp.task('init-browser-sync', function () {
+// func. init browser-sync server
+gulp.task('initBrowserSync', function () {
   browserSync.init({
+
+    // browserSync options
     server: {
       baseDir: path.src,
       directory: true,
@@ -25,15 +24,9 @@ gulp.task('init-browser-sync', function () {
   });
 });
 
-// function to watch
-
-gulp.task('default', ['init-browser-sync'], function () {
-
-  // watch function
-  // gulp.watch(path.src + '**/*.*').on('change', browserSync.reload);
+// default gulp func.
+gulp.task('default', ['initBrowserSync'], function () {
 
   // using manual reload
-  gulp.watch(path.src + '**/*.*').on('change', reload);
+  gulp.watch(path.src + '**/*.*').on('change', browserSync.reload);
 });
-
-//
